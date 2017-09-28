@@ -28,14 +28,8 @@ namespace Microsoft.Azure.WebJobs.Script.WebHost
         private ScriptHostConfiguration _standbyScriptHostConfig;
         private WebScriptHostManager _standbyHostManager;
 
-        // TODO: FACAVAL
-        // private WebHookReceiverManager _standbyReceiverManager;
-
         private ScriptHostConfiguration _activeScriptHostConfig;
         private WebScriptHostManager _activeHostManager;
-
-        // TODO: FACAVAL
-        // private WebHookReceiverManager _activeReceiverManager;
 
         private static ScriptSettingsManager _settingsManager;
 
@@ -49,12 +43,6 @@ namespace Microsoft.Azure.WebJobs.Script.WebHost
             _loggerFactoryBuilder = loggerFactoryBuilder;
             _settings = settings;
         }
-
-        // TODO: FACAVAL
-        //public ISwaggerDocumentManager GetSwaggerDocumentManager(WebHostSettings settings)
-        //{
-        //    return GetWebScriptHostManager(settings).SwaggerDocumentManager;
-        //}
 
         public ScriptHostConfiguration GetScriptHostConfiguration() =>
             GetScriptHostConfiguration(_settings);
